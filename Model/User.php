@@ -6,6 +6,10 @@ class User
 
     private $login;
     private $password;
+    private $date;
+    private $sex;
+    private $nom;
+    private $prenom;
 
     /**
      * @return mixed
@@ -102,10 +106,6 @@ class User
     {
         $this->prenom = $prenom;
     }
-    private $date;
-    private $sex;
-    private $nom;
-    private $prenom;
 
 
 }

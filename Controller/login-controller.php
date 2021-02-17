@@ -1,19 +1,18 @@
 <?php
 include './../Model/User.php';
 session_start();
-//unset($_SESSION["listeDesErreurs"]);
 
 
-if (isset($_POST['login'])){
+if (isset($_POST['login'])) {
 
     // Connexion à la base de donnée
 
-    $database = mysqli_connect('localhost','root','123456789','fb') or die('Probleme lors de la connexion à la base de données');
+    $database = mysqli_connect('localhost', 'root', '123456789', 'fb') or die('Probleme lors de la connexion à la base de données');
 
     // Prevention des injections SQL.
 
-    $username = mysqli_real_escape_string($database,$_POST["username"]);
-    $password = mysqli_real_escape_string($database,$_POST["password"]);
+    $username = mysqli_real_escape_string($database, $_POST["username"]);
+    $password = mysqli_real_escape_string($database, $_POST["password"]);
 
     // Cryptage du mot de passe
 
@@ -23,9 +22,9 @@ if (isset($_POST['login'])){
 
     $find_request = "SELECT * FROM user WHERE login = '$username' AND password = '$password' ";
 
-    $result = mysqli_query($database,$find_request);
+    $result = mysqli_query($database, $find_request);
 
-    if (mysqli_num_rows($result)){
+    if (mysqli_num_rows($result)) {
 
         // Recuperation des coordonnées de l'utlisateur
 
@@ -50,11 +49,10 @@ if (isset($_POST['login'])){
 
         header("Location: /fb-clone/View/profil.php");
 
-}
-else{
-    $_SESSION["value"] = true;
-    header("Location: /fb-clone/acceuil.php");
+    } else {
+        $_SESSION["value"] = true;
+        header("Location: /fb-clone/acceuil.php");
 
-}
+    }
 }
 
