@@ -1,0 +1,166 @@
+* {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+}
+.wrapper{
+    display:grid;
+    grid-template-rows: 1fr 9fr;
+    height:100%;
+    width:100%;
+
+
+}
+.login{
+    display:grid;
+    background-color: #3d5e95 ;
+    width:100%;
+    justify-content: right;
+    color: white;
+
+
+}
+
+.signup{
+    background-image: linear-gradient(#ffffff, #d4dae7);
+    width:100%;
+    display:grid;
+    justify-content: right;
+
+}
+
+.btn-connexion{
+    color: white;
+    background-color:#456db0;
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius:3px;
+    margin-right: 50px;
+
+}
+
+.login-passwd{
+    width:80%;
+    height:20%
+}
+
+.btn-registration{
+    border: #456db0;
+    border-radius:3px;
+    color:white;
+    font-weight:bold;
+    font-size: 20px;
+    background-image: linear-gradient(#83ae5e, #707f44,#707f44,#707f44, #83ae5e);
+    width: 200px;
+    height: 70px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+.cgi {
+    width:400px;
+    font-size: 12px;
+    margin-top:30px;
+    margin-bottom:20px;
+}
+
+
+.frgt_pswd{
+    color : #92b4d6;
+    font-size: 12px;
+}
+
+.question{
+    font-size: 12px;
+    margin-right: 80px;
+    margin-left:10px;
+}
+
+.signup-input{
+    margin-bottom: 10px;
+}
+
+.profil{
+
+    background-color: #3d5e95 ;
+    width:100%;
+    color: white;
+    position: relative;
+
+}
+
+.btn-logout{
+
+    color: white;
+    background-color:red;
+    width: 130px;
+    height: 20px;
+    border: none;
+    border-radius:2px;
+    margin-right: 50px;
+    text-decoration: none;
+    position:absolute;
+    top: 20px;
+    right:0;
+    padding:10px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+.btn-logout:hover{
+    background-color: rgb(117, 18, 18);
+}
+
+
+.content{
+    background-image: linear-gradient(#ffffff, #d4dae7);
+
+}
+
+.content > *{
+    padding-left:40%;
+    padding-top: 10%;
+}
+
+#erreur-box{
+    display: none;
+    opacity: .8;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: #FFF;
+    width: 100%;
+    z-index: 1;
+}
+#alert{
+    display: none;
+    position: fixed;
+    border-radius:4px;
+    border: 1px solid black;
+    width:540px;
+    z-index: 1;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.5);
+
+}
+
+#alert > div > #alert-head{
+    background-color: #4b6098;
+    padding:20px;
+}
+#alert > div > #alert-body{
+    background-image: linear-gradient(#ffffff, #d4dae7);
+    padding:20px;
+    color: black;
+}
+#alert > div > #alert-foot{
+    background-color: #4b6098;
+    padding:10px;
+    text-align:right;
+}
